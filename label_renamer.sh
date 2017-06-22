@@ -1,4 +1,10 @@
 #!/bin/bash
+#Simple Bash script to rename and delete some labels using the confluence API. Not the best way to do it, but 
+#was a quick simple fix for what I needed.
+
+#This will rename 2 labels. You can add more by adding more to the SEARCHSTRING variable for it to find all of the labels
+#you wish to rename. Also add more curl lines for each label you are removing (if you want to remove any).
+
 SEARCHSTRING="https://YOURCONFLUENCE/rest/api/content/search?cql=space=YOURSPACENAME%20and%20(label=%22old-label-1%22%20OR%20label=%22old-label-2%22)&limit=100"
 echo $SEARCHSTRING
 
